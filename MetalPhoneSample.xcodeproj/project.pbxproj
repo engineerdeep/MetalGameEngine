@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8B34A5FE24688EB80065665F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B34A5FD24688EB80065665F /* Types.swift */; };
+		8B4241D3246ED7B0004D2152 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4241D2246ED7B0004D2152 /* Preferences.swift */; };
+		8B4241D5246EE145004D2152 /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4241D4246EE145004D2152 /* ShaderLibrary.swift */; };
+		8B4241D7246EE624004D2152 /* VertexDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4241D6246EE624004D2152 /* VertexDescriptorLibrary.swift */; };
+		8B4241D9246EE9DC004D2152 /* RenderPipelineDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4241D8246EE9DC004D2152 /* RenderPipelineDescriptorLibrary.swift */; };
+		8B4241DB246EECAE004D2152 /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4241DA246EECAE004D2152 /* RenderPipelineStateLibrary.swift */; };
+		8B4712BA246ED5790054FB61 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4712B9246ED5790054FB61 /* Engine.swift */; };
 		8B574A492454E95F009F1B6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B574A482454E95F009F1B6C /* AppDelegate.swift */; };
 		8B574A4B2454E95F009F1B6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B574A4A2454E95F009F1B6C /* SceneDelegate.swift */; };
 		8B574A4D2454E95F009F1B6C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B574A4C2454E95F009F1B6C /* GameView.swift */; };
@@ -20,6 +26,12 @@
 
 /* Begin PBXFileReference section */
 		8B34A5FD24688EB80065665F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		8B4241D2246ED7B0004D2152 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		8B4241D4246EE145004D2152 /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
+		8B4241D6246EE624004D2152 /* VertexDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorLibrary.swift; sourceTree = "<group>"; };
+		8B4241D8246EE9DC004D2152 /* RenderPipelineDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineDescriptorLibrary.swift; sourceTree = "<group>"; };
+		8B4241DA246EECAE004D2152 /* RenderPipelineStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLibrary.swift; sourceTree = "<group>"; };
+		8B4712B9246ED5790054FB61 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		8B574A452454E95F009F1B6C /* MetalPhoneSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalPhoneSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B574A482454E95F009F1B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B574A4A2454E95F009F1B6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +55,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B4712B4246ED1070054FB61 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8B34A5FD24688EB80065665F /* Types.swift */,
+				8B4712B9246ED5790054FB61 /* Engine.swift */,
+				8B4241D2246ED7B0004D2152 /* Preferences.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8B4712B5246ED10E0054FB61 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8B4241D4246EE145004D2152 /* ShaderLibrary.swift */,
+				8B4241D6246EE624004D2152 /* VertexDescriptorLibrary.swift */,
+				8B4241D8246EE9DC004D2152 /* RenderPipelineDescriptorLibrary.swift */,
+				8B4241DA246EECAE004D2152 /* RenderPipelineStateLibrary.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		8B4712B6246ED1160054FB61 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				8B574A5C2454EFDE009F1B6C /* MyShaders.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		8B4712B7246ED1230054FB61 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				8B574A5E2454F3F3009F1B6C /* ViewController.swift */,
+				8B574A4C2454E95F009F1B6C /* GameView.swift */,
+				8B574A4E2454E95F009F1B6C /* Main.storyboard */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		8B4712B8246ED1270054FB61 /* Other Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B574A482454E95F009F1B6C /* AppDelegate.swift */,
+				8B574A4A2454E95F009F1B6C /* SceneDelegate.swift */,
+				8B574A512454E961009F1B6C /* Assets.xcassets */,
+				8B574A532454E961009F1B6C /* LaunchScreen.storyboard */,
+				8B574A562454E961009F1B6C /* Info.plist */,
+			);
+			path = "Other Files";
+			sourceTree = "<group>";
+		};
 		8B574A3C2454E95F009F1B6C = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +125,11 @@
 		8B574A472454E95F009F1B6C /* MetalPhoneSample */ = {
 			isa = PBXGroup;
 			children = (
-				8B574A482454E95F009F1B6C /* AppDelegate.swift */,
-				8B574A4A2454E95F009F1B6C /* SceneDelegate.swift */,
-				8B574A4C2454E95F009F1B6C /* GameView.swift */,
-				8B34A5FD24688EB80065665F /* Types.swift */,
-				8B574A5C2454EFDE009F1B6C /* MyShaders.metal */,
-				8B574A4E2454E95F009F1B6C /* Main.storyboard */,
-				8B574A512454E961009F1B6C /* Assets.xcassets */,
-				8B574A532454E961009F1B6C /* LaunchScreen.storyboard */,
-				8B574A562454E961009F1B6C /* Info.plist */,
-				8B574A5E2454F3F3009F1B6C /* ViewController.swift */,
+				8B4712B4246ED1070054FB61 /* Core */,
+				8B4712B7246ED1230054FB61 /* Display */,
+				8B4712B6246ED1160054FB61 /* Shaders */,
+				8B4712B5246ED10E0054FB61 /* Libraries */,
+				8B4712B8246ED1270054FB61 /* Other Files */,
 			);
 			path = MetalPhoneSample;
 			sourceTree = "<group>";
@@ -148,11 +206,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B574A5F2454F3F3009F1B6C /* ViewController.swift in Sources */,
+				8B4241D5246EE145004D2152 /* ShaderLibrary.swift in Sources */,
 				8B574A5D2454EFDE009F1B6C /* MyShaders.metal in Sources */,
 				8B574A4D2454E95F009F1B6C /* GameView.swift in Sources */,
+				8B4241D7246EE624004D2152 /* VertexDescriptorLibrary.swift in Sources */,
 				8B34A5FE24688EB80065665F /* Types.swift in Sources */,
+				8B4241DB246EECAE004D2152 /* RenderPipelineStateLibrary.swift in Sources */,
 				8B574A492454E95F009F1B6C /* AppDelegate.swift in Sources */,
 				8B574A4B2454E95F009F1B6C /* SceneDelegate.swift in Sources */,
+				8B4241D3246ED7B0004D2152 /* Preferences.swift in Sources */,
+				8B4241D9246EE9DC004D2152 /* RenderPipelineDescriptorLibrary.swift in Sources */,
+				8B4712BA246ED5790054FB61 /* Engine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMN6GZKGJ3;
-				INFOPLIST_FILE = MetalPhoneSample/Info.plist;
+				INFOPLIST_FILE = "MetalPhoneSample/Other Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMN6GZKGJ3;
-				INFOPLIST_FILE = MetalPhoneSample/Info.plist;
+				INFOPLIST_FILE = "MetalPhoneSample/Other Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

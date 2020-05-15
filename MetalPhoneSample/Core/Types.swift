@@ -8,17 +8,14 @@
 
 import simd
 
-protocol sizable {
-    static func size(_ count: Int) -> Int
-    static func stride(_ count: Int) -> Int
-}
+protocol sizable { }
 
 extension sizable {
-    static func size() -> Int {
+    static var size: Int {
         return MemoryLayout<Self>.size
     }
     
-    static func stride() -> Int {
+    static var stride: Int {
         return MemoryLayout<Self>.stride
     }
     
