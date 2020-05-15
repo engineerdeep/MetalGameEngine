@@ -9,10 +9,9 @@
 import MetalKit
 
 class GameView: MTKView {
-    var vertices: [Vertex]!
     
-    var vertexBuffer: MTLBuffer!
-
+    var renderer: Renderer!
+    
     required init(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -21,38 +20,10 @@ class GameView: MTKView {
         Engine.ignite(device: device!)
         
         self.clearColor = Preferences.clearColor
-        
         self.colorPixelFormat = Preferences.mainPixelFormat
         
-        createVertices()
-        createBuffers()
-    }
-    
-    func createVertices() {
-        vertices = [
-            Vertex(position: float3(0, 0.1, 0), color: float4(1,0,0,1)),
-            Vertex(position: float3(-0.2, -0.1, 0), color: float4(0,1,0,1)),
-            Vertex(position: float3(0.2, -0.1, 0), color: float4(0,0,1,1))
-        ]
-    }
-    
-    func createBuffers() {
-        vertexBuffer = Engine.device.makeBuffer(bytes: vertices, length: Vertex.stride(vertices.count), options: [])
-    }
-    
-    override func draw(_ rect: CGRect) {
-        guard let drawable = self.currentDrawable, let renderPassDescriptor = self.currentRenderPassDescriptor else { return }
-        
-        let commandBuffer = Engine.commandQueue.makeCommandBuffer()
-        let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
-        
-        renderCommandEncoder?.setRenderPipelineState(RenderPipelineStateLibrary.pipelineState(.basic))
-        renderCommandEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        renderCommandEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: vertices.count)
-        
-        renderCommandEncoder?.endEncoding()
-        commandBuffer?.present(drawable)
-        commandBuffer?.commit()
+        self.renderer = Renderer()
+        self.delegate = renderer
     }
 }
 
