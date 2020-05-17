@@ -40,7 +40,7 @@
 		8B4241DD246EFCC1004D2152 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		8B4241DF246EFF33004D2152 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		8B4712B9246ED5790054FB61 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
-		8B574A452454E95F009F1B6C /* MetalPhoneSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalPhoneSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B574A452454E95F009F1B6C /* MetalGameEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalGameEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B574A482454E95F009F1B6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B574A4A2454E95F009F1B6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8B574A4C2454E95F009F1B6C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		8B574A3C2454E95F009F1B6C = {
 			isa = PBXGroup;
 			children = (
-				8B574A472454E95F009F1B6C /* MetalPhoneSample */,
+				8B574A472454E95F009F1B6C /* MetalGameEngine */,
 				8B574A462454E95F009F1B6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,12 +141,12 @@
 		8B574A462454E95F009F1B6C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B574A452454E95F009F1B6C /* MetalPhoneSample.app */,
+				8B574A452454E95F009F1B6C /* MetalGameEngine.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B574A472454E95F009F1B6C /* MetalPhoneSample */ = {
+		8B574A472454E95F009F1B6C /* MetalGameEngine */ = {
 			isa = PBXGroup;
 			children = (
 				8B4241DC246EFC91004D2152 /* Game Components */,
@@ -156,7 +156,7 @@
 				8B4712B5246ED10E0054FB61 /* Libraries */,
 				8B4712B8246ED1270054FB61 /* Other Files */,
 			);
-			path = MetalPhoneSample;
+			path = MetalGameEngine;
 			sourceTree = "<group>";
 		};
 		8BA1F8C92471A055000C09B2 /* GameObjects */ = {
@@ -179,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B574A442454E95F009F1B6C /* MetalPhoneSample */ = {
+		8B574A442454E95F009F1B6C /* MetalGameEngine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B574A592454E961009F1B6C /* Build configuration list for PBXNativeTarget "MetalPhoneSample" */;
+			buildConfigurationList = 8B574A592454E961009F1B6C /* Build configuration list for PBXNativeTarget "MetalGameEngine" */;
 			buildPhases = (
 				8B574A412454E95F009F1B6C /* Sources */,
 				8B574A422454E95F009F1B6C /* Frameworks */,
@@ -191,9 +191,9 @@
 			);
 			dependencies = (
 			);
-			name = MetalPhoneSample;
+			name = MetalGameEngine;
 			productName = MetalPhoneSample;
-			productReference = 8B574A452454E95F009F1B6C /* MetalPhoneSample.app */;
+			productReference = 8B574A452454E95F009F1B6C /* MetalGameEngine.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B574A402454E95F009F1B6C /* Build configuration list for PBXProject "MetalPhoneSample" */;
+			buildConfigurationList = 8B574A402454E95F009F1B6C /* Build configuration list for PBXProject "MetalGameEngine" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -224,7 +224,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B574A442454E95F009F1B6C /* MetalPhoneSample */,
+				8B574A442454E95F009F1B6C /* MetalGameEngine */,
 			);
 		};
 /* End PBXProject section */
@@ -410,13 +410,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMN6GZKGJ3;
-				INFOPLIST_FILE = "MetalPhoneSample/Other Files/Info.plist";
+				INFOPLIST_FILE = "MetalGameEngine/Other Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vie.MetalPhoneSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vie.MetalGameEngine;
+				PRODUCT_NAME = MetalGameEngine;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -428,13 +428,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMN6GZKGJ3;
-				INFOPLIST_FILE = "MetalPhoneSample/Other Files/Info.plist";
+				INFOPLIST_FILE = "MetalGameEngine/Other Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vie.MetalPhoneSample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vie.MetalGameEngine;
+				PRODUCT_NAME = MetalGameEngine;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,7 +443,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B574A402454E95F009F1B6C /* Build configuration list for PBXProject "MetalPhoneSample" */ = {
+		8B574A402454E95F009F1B6C /* Build configuration list for PBXProject "MetalGameEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B574A572454E961009F1B6C /* Debug */,
@@ -452,7 +452,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B574A592454E961009F1B6C /* Build configuration list for PBXNativeTarget "MetalPhoneSample" */ = {
+		8B574A592454E961009F1B6C /* Build configuration list for PBXNativeTarget "MetalGameEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B574A5A2454E961009F1B6C /* Debug */,
