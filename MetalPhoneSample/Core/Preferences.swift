@@ -27,6 +27,6 @@ enum ClearColors {
 }
 
 class Preferences {
-    public static var clearColor: MTLClearColor = ClearColors.turquoise.value
+    public static var clearColor: MTLClearColor = ClearColors.grey.value
     public static var mainPixelFormat: MTLPixelFormat = .bgra8Unorm
 }

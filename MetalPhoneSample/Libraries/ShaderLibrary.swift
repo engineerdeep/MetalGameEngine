@@ -54,7 +54,7 @@ public struct Basic_VertexShader: Shader {
     var functionName: String = "basic_vertex_shader"
     var function: MTLFunction {
         let function = ShaderLibrary.defaultLibrary.makeFunction(name: functionName)
-        function?.label = name
+//        function?.label = name
         return function!
     }
 }
@@ -64,7 +64,7 @@ public struct Basic_FragmentShader: Shader {
     var functionName: String = "basic_fragment_shader"
     var function: MTLFunction {
         let function = ShaderLibrary.defaultLibrary.makeFunction(name: functionName)
-        function?.label = name
+//        function?.label = name
         return function!
     }
 }

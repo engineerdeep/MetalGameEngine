@@ -24,6 +24,10 @@
 		8B574A552454E961009F1B6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B574A532454E961009F1B6C /* LaunchScreen.storyboard */; };
 		8B574A5D2454EFDE009F1B6C /* MyShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8B574A5C2454EFDE009F1B6C /* MyShaders.metal */; };
 		8B574A5F2454F3F3009F1B6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B574A5E2454F3F3009F1B6C /* ViewController.swift */; };
+		8BA1F8C824719B6D000C09B2 /* MeshLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1F8C724719B6D000C09B2 /* MeshLibrary.swift */; };
+		8BA1F8CB2471A061000C09B2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1F8CA2471A061000C09B2 /* Player.swift */; };
+		8BA1F8CD2471A13B000C09B2 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1F8CC2471A13B000C09B2 /* Node.swift */; };
+		8BA1F8D02471A1D0000C09B2 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1F8CF2471A1D0000C09B2 /* Renderable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		8B574A562454E961009F1B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B574A5C2454EFDE009F1B6C /* MyShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyShaders.metal; sourceTree = "<group>"; };
 		8B574A5E2454F3F3009F1B6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8BA1F8C724719B6D000C09B2 /* MeshLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshLibrary.swift; sourceTree = "<group>"; };
+		8BA1F8CA2471A061000C09B2 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8BA1F8CC2471A13B000C09B2 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		8BA1F8CF2471A1D0000C09B2 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +70,9 @@
 		8B4241DC246EFC91004D2152 /* Game Components */ = {
 			isa = PBXGroup;
 			children = (
-				8B4241DD246EFCC1004D2152 /* GameObject.swift */,
+				8BA1F8CC2471A13B000C09B2 /* Node.swift */,
+				8BA1F8C92471A055000C09B2 /* GameObjects */,
+				8BA1F8CE2471A1C7000C09B2 /* Protocols */,
 			);
 			path = "Game Components";
 			sourceTree = "<group>";
@@ -84,6 +94,7 @@
 				8B4241D6246EE624004D2152 /* VertexDescriptorLibrary.swift */,
 				8B4241D8246EE9DC004D2152 /* RenderPipelineDescriptorLibrary.swift */,
 				8B4241DA246EECAE004D2152 /* RenderPipelineStateLibrary.swift */,
+				8BA1F8C724719B6D000C09B2 /* MeshLibrary.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -146,6 +157,23 @@
 				8B4712B8246ED1270054FB61 /* Other Files */,
 			);
 			path = MetalPhoneSample;
+			sourceTree = "<group>";
+		};
+		8BA1F8C92471A055000C09B2 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8B4241DD246EFCC1004D2152 /* GameObject.swift */,
+				8BA1F8CA2471A061000C09B2 /* Player.swift */,
+			);
+			path = GameObjects;
+			sourceTree = "<group>";
+		};
+		8BA1F8CE2471A1C7000C09B2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8BA1F8CF2471A1D0000C09B2 /* Renderable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +250,15 @@
 				8B574A5F2454F3F3009F1B6C /* ViewController.swift in Sources */,
 				8B4241D5246EE145004D2152 /* ShaderLibrary.swift in Sources */,
 				8B4241E0246EFF33004D2152 /* Renderer.swift in Sources */,
+				8BA1F8D02471A1D0000C09B2 /* Renderable.swift in Sources */,
 				8B574A5D2454EFDE009F1B6C /* MyShaders.metal in Sources */,
+				8BA1F8CB2471A061000C09B2 /* Player.swift in Sources */,
 				8B574A4D2454E95F009F1B6C /* GameView.swift in Sources */,
 				8B4241D7246EE624004D2152 /* VertexDescriptorLibrary.swift in Sources */,
+				8BA1F8C824719B6D000C09B2 /* MeshLibrary.swift in Sources */,
 				8B34A5FE24688EB80065665F /* Types.swift in Sources */,
 				8B4241DB246EECAE004D2152 /* RenderPipelineStateLibrary.swift in Sources */,
+				8BA1F8CD2471A13B000C09B2 /* Node.swift in Sources */,
 				8B4241DE246EFCC1004D2152 /* GameObject.swift in Sources */,
 				8B574A492454E95F009F1B6C /* AppDelegate.swift in Sources */,
 				8B574A4B2454E95F009F1B6C /* SceneDelegate.swift in Sources */,
